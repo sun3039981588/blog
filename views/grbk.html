@@ -1,0 +1,51 @@
+{{include './header.html'}}
+
+
+
+
+
+
+{{each data m i}}
+<div class="left-down">
+        {{m.author.username}}
+        的热门博客
+    </div>
+    
+<div class="oop">
+    <a href="/huifu/{{m._id}}" class="sr">{{m.headline}}</a>|
+    <span>标签:</span><a href="/bbq/{{m.label[0]}}" class="sr">{{m.label[0].toString()}}</a>
+    <a href="/bbq/{{m.label[0]}}" class="sr">{{m.label[1].toString()}}</a>
+    <a href="/bbq/{{m.label[0]}}" class="sr">{{m.label[2].toString()}}</a>
+    <br>
+    <span>{{m.time.Seconds}}</span>|<span>阅读:  {{m.count}} 次</span>|
+    <span>评论:{{m.replys.length}}  次</span>
+</div>
+
+{{/each}}
+
+
+
+
+
+<div class="page">
+    {{if page != 1}}
+    <a href="/?page={{page-1}}">上一页</a>
+    {{/if}}
+    <span>第{{page}}页/第{{all}}页</span>
+    {{if page != all}}
+    <a href="/?page={{page+1}}">下一页</a>
+    {{/if}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{{include './footer.html'}}

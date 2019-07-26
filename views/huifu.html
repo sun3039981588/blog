@@ -1,0 +1,59 @@
+{{include './header.html'}}
+
+<div class="left-down">
+    {{mas.headline}}
+</div>
+
+
+<div class="oop op">
+
+    <div class="po">
+        <span>作者:</span>
+        <a href="/gr/{{mas.author._id}}" class="sr">{{mas.author.username}}</a>|
+        <span>日期:{{mas.time.Seconds}}</span>|
+        <span> 标签:</span> <a href="/bbq/{{mas.label[0]}}"class="sr">{{mas.label[0].toString()}}</a>
+        <a href="/bbq/{{mas.label[0]}}"class="sr">{{mas.label[1].toString()}}</a>
+        <a href="/bbq/{{mas.label[0]}}"class="sr">{{mas.label[2].toString()}}</a>
+        <br><br>
+        <p>{{mas.content}}</p>
+        <span name='figure'>阅读:{{mas.count}}</span>|&nbsp;<span>评论:{{mas.replys.length}}</span>
+    </div>
+    {{if user}}
+    {{if mas.author.username == user.username}}
+    <a href="/bj/{{mas._id}}">编辑</a>
+    <a href="/del/{{mas._id}}" class="del">删除</a>
+    {{/if}}
+    {{/if}}
+  
+
+    <div class="pl">
+            <h4>评论:</h4>
+            {{each mas.replys m i}}
+            <a href="">{{m.username}}</a><span>回复于:{{m.time}}</span>
+            <p>{{m.contene}}</p>
+            {{/each}}
+            {{if user}}
+           <form action="/huifu/{{mas._id}}" method="post">
+               <textarea name="replys" id="replys" cols="120" rows="10" required></textarea>
+               <button type="submit">留言</button>
+           </form>
+           {{/if}}
+    </div>
+</div>
+
+<script>
+var del = document.querySelector('.del')
+
+del.onclick = function(ev){
+    if(confirm('你确定要删除吗')){
+
+    }else{
+        ev.preventDefault()
+    }
+}
+
+
+
+</script>
+
+{{include './footer.html'}}

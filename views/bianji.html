@@ -1,0 +1,25 @@
+{{include './header.html'}}
+
+<div class="left-down">
+    编辑
+</div>
+
+
+<form action="/sr/{{data._id}}" method="post">
+    &#x3000; &#x3000;<label for="bt">标题:</label>
+    &nbsp; <input type="text" name="bt" value="{{data.headline}}"   ><br>
+    &#x3000; &#x3000;<label for="">标签:</label>
+    &nbsp; <input type="text" name='bq' value="{{data.label[0]}}" ><input type="text" name='bq' value="{{data.label[1]}}" ><input type="text" name='bq' value="{{data.label[2]}}"><br>
+   <p> &#x3000; &#x3000;内容:</p>
+    &#x3000; &#x3000;<textarea name="msg" id="msg" cols="120" rows="10"></textarea><br>
+    &#x3000; &#x3000;<button type="submit">发布</button>{{error}}
+</form>
+
+
+
+
+
+
+
+
+{{include './footer.html'}}

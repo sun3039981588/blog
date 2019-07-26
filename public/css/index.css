@@ -1,0 +1,161 @@
+body,ul,li,p,h1,h2,h3,h4,h5,h6,a{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html,body{
+    background-color: #eee;
+    position: relative;
+    background-image: url('../plc/QQ图片20190719221515.jpg')
+}
+nav{
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 8px 8px #eee;
+    background-color: #fff;
+    border-bottom: 2px solid #eee
+}
+.container{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    line-height: 60px;
+}
+.container ul{
+    display: flex;
+}
+.container ul li{
+    padding: 0 10px 0 10px;
+}
+.container ul li a{
+    color: black
+}
+.container ul li:hover a{
+    color: red
+}
+.container .left{
+    display: flex;   
+}
+.container .right{
+    position: absolute;
+    right: 0;
+}
+.container .right a{
+    color: black
+}
+.container .right a:hover{
+    color: red
+}
+.container .right input{
+    width: 80px;
+    border: orange 1px solid;
+}
+h1{
+    color: orange;
+}
+.left-down{
+    position: absolute;
+    left: -150px;
+    top: 50px;
+    background-color: rgba(255, 0, 0, 0.4);
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    line-height: 20px;
+    text-align: center;
+  
+    word-wrap:break-word ;
+
+}
+section{
+    width: 960px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 100%;
+    position: relative;;
+}
+.container .right .user{
+    color: blue
+}
+.grzy{
+    padding: 20px
+}
+.grzy li{
+    padding: 10px;
+}
+.ssr{
+    font-size: 28px;
+    color: orange;
+   
+}
+.sr{
+    font-size: 18px;
+    color: orange;
+}
+.ssr:hover,.sr:hover{
+    text-decoration:underline
+}
+.oop{
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px dashed black;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.op{
+    border-bottom: none;
+}
+.po{
+    padding-bottom: 10px;
+    border-bottom: 1px solid black
+}
+.pl{
+    padding-top: 20px;
+}
+.gy{
+    padding: 0 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.page{
+    width: 864px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.sr-img{
+    width: 48px;
+    height: 48px;
+    position: relative;
+    margin-left: 10px;
+}
+.sr-img .tx-btn{
+    position: absolute;
+    text-align: center;
+    line-height: 48px;
+    color:#fff;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none
+}
+.sr-img:hover .tx-btn{
+    display: block;
+}
+.show{
+    position: relative;width: 100px;height: 100px;
+}
+.show-up{
+     position: absolute;top: 0;left: 0;color: #ffffff;line-height: 100px;text-align: center;width: 100%;background-color: rgba(0, 0, 0, 0.5);display: none
+}
+.show:hover .show-up{
+    display: block;
+}

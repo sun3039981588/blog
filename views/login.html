@@ -1,0 +1,14 @@
+{{include './header.html'}}
+<div class="left-down">
+        登录
+</div>
+    <div>
+        <form action="/login" method="post">
+            <label>&#x3000;&#x3000;账号：<input type="text" name="username" required value="张三"></label><br>
+            <label>&#x3000;&#x3000;密码：<input type="password" name="password" required value="123"></label><br>
+            &#x3000;&#x3000;<button type="submit">登录</button>{{error}}
+        </form>
+    </div>
+
+
+{{include './footer.html'}}

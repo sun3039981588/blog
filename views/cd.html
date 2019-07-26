@@ -1,0 +1,29 @@
+{{include './header.html'}}
+
+<div class="left-down">
+        存档
+</div>
+    
+
+
+<div class="oop">
+   {{each data m i}}
+     {{if lastYear != m.time.year}}
+       <h3>{{lastYear = m.time.year}}</h3>
+     {{/if}}
+   
+     <span>{{m.time.Seconds}}</span>&#x3000; <a href="/huifu/{{m._id}}" class="sr">{{m.headline}}</a><br>
+   
+   {{/each}}
+   
+ 
+</div>
+
+
+
+
+
+
+
+
+{{include './footer.html'}}

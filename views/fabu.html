@@ -1,0 +1,35 @@
+{{include './header.html'}}
+
+<div class="left-down">
+    发布博客
+</div>
+
+
+{{if user}}
+<form action="/fb" method="post">
+    &#x3000; &#x3000;<label for="bt">标题:</label>
+    &nbsp; <input type="text" name="bt"><br>
+    &#x3000; &#x3000;<label for="">标签:</label>
+    &nbsp; <input type="text" name='bq'><input type="text" name='bq'><input type="text" name='bq'><br>
+   <p> &#x3000; &#x3000;内容:</p>
+    &#x3000; &#x3000;<textarea name="msg" id="msg" cols="120" rows="10"></textarea><br>
+    &#x3000; &#x3000;<button type="submit">发布</button>{{error}}
+</form>
+{{else}}
+<div>
+        <form action="/login" method="post">
+            <label>&#x3000;&#x3000;账号：<input type="text" name="username" required></label><br>
+            <label>&#x3000;&#x3000;密码：<input type="password" name="password" required></label><br>
+            &#x3000;&#x3000;<button type="submit">登录</button>{{error}}
+        </form>
+    </div>
+
+
+{{/if}}
+
+
+
+
+
+
+{{include './footer.html'}}

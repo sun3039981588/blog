@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="author" content="孙锐">
+    <title></title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+   <nav>
+       <div class="container">
+        <div class="left">
+            <h1>BLOG</h1>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/cd">存档</a></li>
+            <li><a href="/bq">标签</a></li>
+            <li><a href="/fb">发布</a></li>
+        </ul>
+        </div>
+        <div class="right" style="display: flex;width: 200px;">
+            <form action="/sousuo" method="get" style="width: 0;height: 0">
+                <input type="text" placeholder="搜索" width="50px" name="name">
+            </form>
+            
+            
+            {{if user}}
+            <div style="position: absolute;right: -80px">
+                <img src="{{user.headr}}" alt="" style="width: 48px;height: 48px;vertical-align: middle">
+                <a href="/zzzy" class="user"> {{user.username}} </a>
+                &#x3000;
+                <a href="/logout">退出登录</a>
+            </div>
+            {{else}}
+            <div style="position: absolute;right: -30px">
+                <a href="/login">登录</a>
+                &#x3000;
+                <a href="/regist">注册</a>
+            </div>
+            {{/if}}
+        </div>
+
+       </div>
+   </nav>
+
+   <section>

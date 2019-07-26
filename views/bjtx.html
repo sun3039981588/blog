@@ -1,0 +1,29 @@
+{{include './header.html'}}
+<div class="left-down">
+        编辑头像
+</div>
+
+<div class="oop" style="border-bottom: none">
+   <form action="/upload" method="post" enctype="multipart/form-data">
+      <div  class="show">
+            <img class="show-img" src="{{user.headr}}" alt="" style="width: 100px;height: 100px;">
+            <label for="xztx" class="show-up">选择头像</label>
+            <input type="file" id="xztx" name="xztx" accept="image/*" hidden>
+      </div>
+      <br>
+      <button type="submit">修改头像</button>
+   </form>
+</div>
+
+<script>
+
+
+document.querySelector('#xztx').onchange = function(){
+    var file = this.files[0];
+    document.querySelector('.show-img').src = URL.createObjectURL(file);
+}
+
+
+
+</script>
+{{include './footer.html'}}

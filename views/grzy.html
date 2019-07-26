@@ -1,0 +1,29 @@
+{{include './header.html'}}
+
+<div class="left-down">
+    更改{{user.username}}个人信息
+</div>
+<form action="/edit" method="post">
+<ul class="grzy">
+    <li style="display: flex"><span>我的头像:</span>
+    <div class="sr-img">
+        <img src="{{user.headr}}" alt="" style="width: 48px;height: 48px;vertical-align: middle;">
+        <a href="head-btn/{{user.username}}" class="tx-btn">编辑头像</a>
+    </div>
+    </li>
+    <li>姓名&#x3000;:&#x3000;<input type="text" value="{{user.username}}" disabled></li>
+    <li>邮箱&#x3000;:&#x3000;<input type="text" name="emali"></li>
+    <li>年龄&#x3000;:&#x3000;<input type="text" name="age" required></label></li>
+    <li>性别&#x3000;:&#x3000;
+        <input type="radio" name="gender" value="男">男
+        <input type="radio" name="gender" value="女">女
+    </li>
+    &nbsp;&nbsp;<button type="submit">修改</button>
+</ul>
+</form>
+
+
+
+
+
+{{include './footer.html'}}

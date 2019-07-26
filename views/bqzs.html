@@ -1,0 +1,48 @@
+{{include './header.html'}}
+
+
+
+
+<div class="left-down">
+    TGA:{{name}}
+</div>
+
+<div class="oop" style="border: none">
+    <h4>2019年</h4>
+    {{each data m i}}
+    {{if m.time.year == 2019 }}
+    <span>{{m.time.Seconds}}</span>
+    <a href="/huifu/{{m._id}}" style="color: orange">{{m.headline}}</a><br>
+    {{/if}}
+    {{/each}}
+ 
+    <h4>2018年</h4>
+    {{each data m i}}
+    {{if m.time.year ==2018}}
+     <span>{{m.time.Seconds}}</span><a href="/huifu/{{m._id}}" class="sr">{{m.headline}}</a><br>
+    {{/if}}
+    {{/each}}
+    <h4>2017年</h4>
+    {{each data m i}}
+    {{if m.time.year ==2017}}
+     <span>{{m.time.Seconds}}</span><a href="/huifu/{{m._id}}" class="sr">{{m.headline}}</a><br>
+    {{/if}}
+    {{/each}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{include './footer.html'}}

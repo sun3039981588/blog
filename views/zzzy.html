@@ -1,0 +1,32 @@
+{{include './header.html'}}
+
+{{each data m }}
+<div class="left-down">
+    {{m.username}}的个人信息
+</div>
+
+<form action="/bjzy" method="get">
+    <ul class="grzy">
+            <li style="display: flex"><span>我的头像:</span>
+            <div class="sr-img">
+                <img src="{{user.headr}}" alt="" style="width: 48px;height: 48px;vertical-align: middle;">
+                <a href="head-btn/{{user.username}}" class="tx-btn">编辑头像</a>
+            </div>
+            </li>
+            <li>姓名&#x3000;:&#x3000;{{m.username}}</li>
+            <li>邮箱&#x3000;:&#x3000;{{m.email}}</li>
+            <li>年龄&#x3000;:&#x3000;{{m.age}}</li>
+            <li>性别&#x3000;:&#x3000;{{m.gender}}</li>
+            &nbsp;&nbsp;<button type="submit">编辑</button>
+    </ul>
+</form>
+{{/each}}
+
+
+
+
+
+
+
+
+{{include './footer.html'}}

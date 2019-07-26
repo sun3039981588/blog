@@ -1,0 +1,43 @@
+ {{include './header.html'}}
+
+
+<div class="left-down">
+    热门博客
+</div>
+{{if msgs.length>0}}
+{{each msgs msg i}}
+<div class="oop">
+    <a href="/huifu/{{msg._id}}" class="ssr">{{msg.headline}}</a><br><br>
+    <span>作者:</span>
+    <a href="/gr/{{msg.author._id}}" class="sr">{{msg.author.username}}</a>|
+    <span>日期:{{msg.time.Seconds}}</span>|
+    <span> 标签:</span> <a href="/bbq/{{msg.label[0]}}"class="sr">{{msg.label[0].toString()}}</a>
+    <a href="/bbq/{{msg.label[1]}}" class="sr">{{msg.label[1].toString()}}</a>
+    <a href="/bbq/{{msg.label[2]}}" class="sr">{{msg.label[2].toString()}}</a>
+    <br><br>
+    <a href="/huifu/{{msg._id}}"class="sr gy">{{msg.content}}</a><br><br>
+    <span>阅读:{{msg.count}}</span>|&nbsp;<span>评论:{{msg.replys.length}}</span>
+</div>
+{{/each}}
+{{else}}
+<div class="oop">
+     <span>还没发布新博客,快登录发布把！</span>
+</div>
+{{/if}}
+
+{{if msgs.length>0}}
+<div class="page">
+    {{if page != 1}}
+    <a href="/?page={{page-1}}">上一页</a>
+    {{/if}}
+    <span>第{{page}}页/第{{all}}页</span>
+    {{if page != all}}
+    <a href="/?page={{page+1}}">下一页</a>
+    {{/if}}
+</div>
+{{/if}}
+
+
+
+
+{{include './footer.html'}}
